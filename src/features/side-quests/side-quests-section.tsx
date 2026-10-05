@@ -10,7 +10,7 @@ import { prsUrl } from '@/lib/format';
 function SideQuestsSection() {
   return (
     <section id="quests" className="scroll-mt-16 pt-16 md:pt-20">
-      <SectionHeading label="Side quests" title="Smaller things I'm proud of" />
+      <SectionHeading label="Side quests" title="PRs I'm proud of" />
       <div className="masonry sm:grid-cols-2 lg:grid-cols-3">
         {sideQuests.map((quest, i) => (
           <QuestTile key={quest.title} quest={quest} delay={(i % 3) * 0.05} />
