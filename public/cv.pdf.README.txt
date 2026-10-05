@@ -1,1 +1,0 @@
-Drop the exported CV here as cv.pdf (served at /CV/cv.pdf).

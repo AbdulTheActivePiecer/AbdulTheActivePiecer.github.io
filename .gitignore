@@ -5,3 +5,11 @@ dist
 .DS_Store
 .env*
 !.env.example
+
+# raw captures with real account data, never publish
+docs/screenshots/raw/
+docs/mockup/shots/
+
+# private working files (incl. the decision log); only the PDF source is published
+docs/*
+!docs/cv-pdf/

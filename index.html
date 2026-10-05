@@ -2,15 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdul-rahman Khalil</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Abdul-Rahman Al-Hussien · Senior Product Engineer</title>
+    <meta
+      name="description"
+      content="Full-stack TypeScript engineer at Activepieces since day one: the flow builder, embedding, billing and AI, told as a flow."
+    />
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:title"
+      content="Abdul-Rahman Al-Hussien · Senior Product Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Four years building Activepieces, from the first flow builder to AI billing."
+    />
+    <meta property="og:url" content="https://abdultheactivepiecer.github.io/" />
+    <meta name="theme-color" content="#6d4aff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdul-Rahman Al-Hussien",
+        "jobTitle": "Senior Product Engineer",
+        "worksFor": { "@type": "Organization", "name": "Activepieces" },
+        "url": "https://abdultheactivepiecer.github.io/",
+        "sameAs": [
+          "https://github.com/AbdulTheActivePiecer",
+          "https://jo.linkedin.com/in/abdul-rahman-al-hussien-21a074198"
+        ],
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Node.js",
+          "Fastify",
+          "Workflow automation"
+        ]
+      }
+    </script>
     <script>
       (function () {
         try {
           var stored = localStorage.getItem('theme');
           var dark =
             stored === 'dark' ||
-            ((!stored || stored === 'system') &&
+            (stored !== 'light' &&
               window.matchMedia('(prefers-color-scheme: dark)').matches);
           document.documentElement.classList.toggle('dark', dark);
         } catch (e) {}
