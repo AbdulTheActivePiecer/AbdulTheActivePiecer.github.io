@@ -1,9 +1,11 @@
+import { ArrowUpRight } from 'lucide-react';
 import { useLayoutEffect, useRef, useState } from 'react';
 
 import { PrLinks } from '@/components/custom/pr-links';
 import { Reveal } from '@/components/custom/reveal';
 import { SectionHeading } from '@/components/custom/section-heading';
 import { type SideQuest, sideQuests } from '@/content/side-quests';
+import { prsUrl } from '@/lib/format';
 
 function SideQuestsSection() {
   return (
@@ -44,16 +46,29 @@ function QuestTile({ quest, delay }: { quest: SideQuest; delay: number }) {
       <Reveal delay={delay}>
         <article
           ref={ref}
-          className="bg-card hover:border-brand grid content-start gap-1.5 rounded-xl border px-4 py-3.5 transition hover:-translate-y-0.5"
+          className="bg-card hover:border-brand has-focus-visible:border-brand relative grid content-start gap-1.5 rounded-xl border px-4 py-3.5 transition hover:-translate-y-0.5"
         >
           <span className="text-muted-foreground font-mono text-xs">
             {quest.date}
           </span>
           <h3 className="text-base leading-snug font-semibold">
-            {quest.title}
+            {quest.prs.length > 0 ? (
+              // stretched link: the whole card opens the PRs behind it
+              <a
+                href={prsUrl(quest.prs)}
+                target="_blank"
+                rel="noopener"
+                className="group/link outline-none after:absolute after:inset-0 after:rounded-xl"
+              >
+                {quest.title}
+                <ArrowUpRight className="text-muted-foreground group-hover/link:text-brand ml-1 inline size-4 align-text-top transition-colors" />
+              </a>
+            ) : (
+              quest.title
+            )}
           </h3>
           <p className="text-muted-foreground text-sm">{quest.description}</p>
-          <PrLinks prs={quest.prs} />
+          <PrLinks prs={quest.prs} className="relative" />
         </article>
       </Reveal>
     </div>

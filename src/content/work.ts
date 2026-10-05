@@ -26,26 +26,7 @@ const caseStudies: CaseStudy[] = [
     },
   },
   {
-    label: 'Case 02 · Billing',
-    title: 'Moving billing to Autumn',
-    problem:
-      'Plans, limits and credits lived in license keys and Stripe logic spread across Cloud and self-hosted.',
-    built:
-      'I moved billing onto {link}, one streamlined setup for both self-hosted and Cloud customers. It made billing AI usage, launching new plans and running trials a breeze.',
-    outcome:
-      'One billing model for Cloud and Enterprise: +12.9k / −4.6k lines across 229 files, plus a 7-PR stack for AI cost.',
-    builtLink: { label: 'Autumn', href: 'https://useautumn.com' },
-    prs: [14436, 14729, 15494],
-    stack: ['Node.js', 'Fastify', 'PostgreSQL', 'Redis', 'Autumn'],
-    screenshot: {
-      src: 'shots/billing-v4.webp',
-      alt: 'The billing page: current plan and credit usage',
-      width: 1600,
-      height: 1200,
-    },
-  },
-  {
-    label: 'Case 03 · Embedding',
+    label: 'Case 02 · Embedding',
     title: 'Activepieces inside other products',
     problem:
       'SaaS teams wanted Activepieces inside their own app, under their own brand.',
@@ -63,6 +44,25 @@ const caseStudies: CaseStudy[] = [
     demo: {
       href: 'https://embed.activepieces.com/',
       label: 'Try the live embed demo',
+    },
+  },
+  {
+    label: 'Case 03 · Billing',
+    title: 'Moving billing to Autumn',
+    problem:
+      'Plans, limits and credits lived in license keys and Stripe logic spread across Cloud and self-hosted.',
+    built:
+      'I moved billing onto {link}, one streamlined setup for both self-hosted and Cloud customers. It made billing AI usage, launching new plans and running trials a breeze.',
+    outcome:
+      'One billing model for Cloud and Enterprise: +12.9k / −4.6k lines across 229 files, plus a 7-PR stack for AI cost.',
+    builtLink: { label: 'Autumn', href: 'https://useautumn.com' },
+    prs: [14436, 14729, 15494],
+    stack: ['Node.js', 'Fastify', 'PostgreSQL', 'Redis', 'Autumn'],
+    screenshot: {
+      src: 'shots/billing-v4.webp',
+      alt: 'The billing page: current plan and credit usage',
+      width: 1600,
+      height: 1200,
     },
   },
 ];

@@ -23,6 +23,14 @@ function prUrl(pr: number) {
   return `${REPO_URL}/pull/${pr}`;
 }
 
+// One PR opens directly; several open the repo's PR list filtered to just
+// those numbers (GitHub search matches bare PR numbers).
+function prsUrl(prs: number[]) {
+  if (prs.length === 1) return prUrl(prs[0]);
+  const query = `is:pr ${prs.join(' ')}`;
+  return `${REPO_URL}/pulls?q=${encodeURIComponent(query)}`;
+}
+
 const REPO_URL = 'https://github.com/activepieces/activepieces';
 
 export {
@@ -31,5 +39,6 @@ export {
   formatDuration,
   formatRange,
   prUrl,
+  prsUrl,
   REPO_URL,
 };
